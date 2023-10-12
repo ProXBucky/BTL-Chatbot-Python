@@ -34,15 +34,18 @@ $ python (py -3.7-64) chat.py
 ```
 
 Run backend Flask (app.py)
+```
 $ python (py -3.7-64) app.py
-
+```
 
 Install frontend ReactJS
+```
 $ cd Frontend-React
 $ npm install (install npm if you haven't)
-
+```
 
 Run frontend ReactJS
+```
 $ npm run dev
 ```
 
