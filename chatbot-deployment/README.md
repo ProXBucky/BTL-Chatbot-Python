@@ -53,7 +53,8 @@ Install frontend ReactJS
 Remember install npm if you haven't
 You can read "How to Install Node.js and NPM" in https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac#windows
 ```
-$ cd Frontend-React
+Open new terminal
+$ cd chatbot-deployment/Frontend-React
 $ (Frontend-React) npm install 
 ```
 
