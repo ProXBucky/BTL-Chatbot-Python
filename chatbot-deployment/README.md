@@ -55,6 +55,7 @@ You can read "How to Install Node.js and NPM" in https://radixweb.com/blog/insta
 ```
 Open new terminal
 $ cd chatbot-deployment/Frontend-React
+$ (Frontend-React) rm -r package-lock.json
 $ (Frontend-React) npm install 
 ```
 
