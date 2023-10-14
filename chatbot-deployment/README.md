@@ -1,10 +1,13 @@
 
 ## Initial Setup:
 This repo currently contains the starter files.
-
 Clone repo and create a virtual environment
+
+Remember install "npm" if you haven't
+You can read "How to Install Node.js and NPM" in https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac#windows
 ```
 $ git clone https://github.com/ProXBucky/BTL-Chatbot-Python.git
+$ npm install vite
 $ cd chatbot-deployment
 $ (chatbot-deployment) python3 -m venv venv 
 or
@@ -50,8 +53,6 @@ $ (chatbot-deployment) py -3.7-64 app.py (download version <3.9)
 ```
 
 Install frontend ReactJS
-Remember install npm if you haven't
-You can read "How to Install Node.js and NPM" in https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac#windows
 ```
 Open new terminal
 $ cd chatbot-deployment/Frontend-React
