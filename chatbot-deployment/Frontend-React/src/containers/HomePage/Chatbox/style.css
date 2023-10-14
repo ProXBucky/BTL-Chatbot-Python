@@ -40,7 +40,7 @@ html {
     opacity: 0;
     transition: all .5s ease-in-out;
     overflow: hidden;
-    overflow: 25px;
+    border-radius: 25px;
 }
 
 /* CONTENT ISOPEN */
@@ -109,6 +109,8 @@ html {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.4);
+
 }
 
 /* HEADER */
@@ -183,19 +185,27 @@ html {
 }
 
 .chatbox__footer input {
-    width: 80%;
+    width: 100%;
     border: none;
     outline: none;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 50px;
     border-radius: 30px;
     text-align: left;
     background-color: white;
     color: black;
+    position: relative;
 
 }
 
 .chatbox__send--footer {
     color: black;
+    background-color: transparent;
+    position: absolute;
+    right: 4%;
 }
 
 .chatbox__button button,

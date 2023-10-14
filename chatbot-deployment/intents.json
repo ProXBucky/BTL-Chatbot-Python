@@ -1,98 +1,273 @@
-  {
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Hi",
-          "Hey",
-          "How are you",
-          "Is anyone there?",
-          "Hello",
-          "Good day",
-          "Xin chào"
-        ],
-        "responses": [
-          "Hey :-)",
-          "Hello, thanks for visiting",
-          "Hi there, what can I do for you?",
-          "Hi there, how can I help?"
-        ]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": [
-          "Bye",
-          "See you later",
-          "Goodbye"
-        ],
-        "responses": [
-          "See you later, thanks for visiting",
-          "Have a nice day",
-          "Bye! Come back again soon."
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": [
-          "Thanks",
-          "Thank you",
-          "That's helpful",
-          "Thank's a lot!"
-        ],
-        "responses": [
-          "Happy to help!",
-          "Any time!",
-          "My pleasure"
-        ]
-      },
-      {
-        "tag": "items",
-        "patterns": [
-          "Which items do you have?",
-          "What kinds of items are there?",
-          "What do you sell?"
-        ],
-        "responses": [
-          "We sell coffee and tea",
-          "We have coffee and tea"
-        ]
-      },
-      {
-        "tag": "payments",
-        "patterns": [
-          "Do you take credit cards?",
-          "Do you accept Mastercard?",
-          "Can I pay with Paypal?",
-          "Are you cash only?"
-        ],
-        "responses": [
-          "We accept VISA, Mastercard and Paypal",
-          "We accept most major credit cards, and Paypal"
-        ]
-      },
-      {
-        "tag": "delivery",
-        "patterns": [
-          "How long does delivery take?",
-          "How long does shipping take?",
-          "When do I get my delivery?"
-        ],
-        "responses": [
-          "Delivery takes 2-4 days",
-          "Shipping takes 2-4 days"
-        ]
-      },
-      {
-        "tag": "funny",
-        "patterns": [
-          "Tell me a joke!",
-          "Tell me something funny!",
-          "Do you know a joke?"
-        ],
-        "responses": [
-          "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-          "What did the buffalo say when his son left for college? Bison."
-        ]
-      }
-    ]
-  }
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?",
+        "Greetings! What brings you here today?",
+        "Hello! We're glad you stopped by. How can we assist you?",
+        "Hi! Feel free to ask if you have any questions or need assistance.",
+        "Hello! How can we make your day better?",
+        "Hey there! If you need any help, don't hesitate to ask."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye"
+      ],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon.",
+        "Goodbye! Take care and have a great day!",
+        "Farewell! We hope to see you again soon.",
+        "Until next time! Have a wonderful day!",
+        "Goodbye! Remember, we're always here to help.",
+        "Take care! If you ever need assistance, don't hesitate to reach out.",
+        "Bye! It was a pleasure assisting you. Have a fantastic day!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thank's a lot!",
+        "Appreciate it"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure!",
+        "You're welcome!",
+        "Glad I could assist!",
+        "No problem, that's what I'm here for!",
+        "It was my pleasure to assist you!",
+        "You're very welcome! If you have any more questions, feel free to ask.",
+        "Thank you for your kind words! Let me know if there's anything else I can help you with.",
+        "I appreciate your gratitude! If you need further assistance, don't hesitate to reach out."
+      ]
+    },
+    {
+      "tag": "items",
+      "patterns": [
+        "Which items do you have?",
+        "What kinds of items are there?",
+        "What do you sell?",
+        "what do you have?",
+        "Do you have any drinks?",
+        "Which drinks or foods do you have?"
+      ],
+      "responses": [
+        "We sell coffee, tea, frosty, snack and cake"
+      ]
+    },
+    {
+      "tag": "coffee",
+      "patterns": [
+        "Tell me about your coffee options",
+        "What kinds of coffee do you have?",
+        "Can you explain your coffee menu?"
+      ],
+      "responses": [
+        "We have Cappuccino, Americano, Latte",
+        "We have Highlight Coffee, Vietnamese Coffee, Cold Brew,... "
+      ]
+    },
+    {
+      "tag": "tea",
+      "patterns": [
+        "Tell me about your tea options",
+        "What kinds of tea do you have?",
+        "Can you explain your tea menu?"
+      ],
+      "responses": [
+        "Certainly! We offer a variety of tea options to choose from: lotte, green tea, sweet tea",
+        "Sure, here are some of our tea selections:lotte, green tea, sweet tea",
+        "Certainly! We offer a variety of tea options to choose from: Fruit Tea, Macchiato Milk Tea, Chocolate Green Tea",
+        "Sure, here are some of our tea selections: Fruit Tea, Macchiato Milk Tea, Chocolate Green Tea"
+      ]
+    },
+    {
+      "tag": "frosty",
+      "patterns": [
+        "What frosty drinks do you have?",
+        "Tell me about your frosty options",
+        "Can you explain your frosty menu?"
+      ],
+      "responses": [
+        "Of course! Our frosty drinks are perfect for cooling down. Here are a few options: Frosty Cat, Frosty Tiger, Latten Frosty",
+        "Certainly! Here are some of our refreshing frosty beverages: Frosty Cat, Frosty Tiger, Latten Frosty"
+      ]
+    },
+    {
+      "tag": "snack",
+      "patterns": [
+        "What snacks do you offer?",
+        "Tell me about your snacks",
+        "Can you explain your snack menu?"
+      ],
+      "responses": [
+        "Absolutely! We have a delightful selection of snacks. Here are a few options: oreo, cheezit, dried jackfruit, dried chicken, lay, oishi,...",
+        "Sure, here are some of our tasty snacks: oreo, cheezit, dried jackfruit, dried chicken, lay, oishi,..."
+      ]
+    },
+    {
+      "tag": "cake",
+      "patterns": [
+        "What cakes do you have?",
+        "Tell me about your cakes",
+        "Can you explain your cake options?"
+      ],
+      "responses": [
+        "Certainly! Indulge in our delicious cakes. Here are some of our cake offerings: rainbow cake, chocolate cake, butter cake, banh mi, tiramisu, mochi,... ",
+        "Of course! Here are some of our delightful cake options: rainbow cake, chocolate cake, butter cake, banh mi, tiramisu, mochi,... "
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?",
+        "How can I pay for my order?",
+        "What payment methods do you accept?",
+        "Can I use credit cards to pay?",
+        "Do you accept online payment?",
+        "What are your accepted payment options?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?",
+        "How long does delivery take?",
+        "What's the delivery time?",
+        "When will I receive my order?",
+        "Can you tell me about your shipping process?",
+        "What is the expected delivery duration?"
+      ],
+      "responses": [
+        "Delivery takes 15-45 minutes",
+        "Shipping takes 15-45 minutes",
+        "We aim to deliver your order as quickly and efficiently as possible",
+        "Certainly! Our delivery process ensures your order reaches you in a timely manner."
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?",
+        "Make me laugh!",
+        "Share something humorous!"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison.",
+        "Of course, here's a joke for you: Why don't scientists trust atoms? Because they make up everything!",
+        "Sure, here's a funny one: Parallel lines have so much in common. It’s a shame they’ll never meet.",
+        "Here's a classic: Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "How about this one: Why don't some couples go to the gym? Because some relationships don't work out!"
+      ]
+    },
+    {
+      "tag": "size",
+      "patterns": [
+        "How many size of the product?",
+        "Which size?",
+        "Coffee size",
+        "Tea size",
+        "Frosty size"
+      ],
+      "responses": [
+        "We have 3 size: S (original price), M (add 5000VND), L (add 10000VND)"
+      ]
+    },
+    {
+      "tag": "topping",
+      "patterns": [
+        "Which toppings you have?",
+        "Which topping?",
+        "Can I add more topping?"
+      ],
+      "responses": [
+        "We have many toppings: White Pearl, Black Pearl, Coffee Jelly, Caramel Souce,... You must pay extra 10000VND",
+        "Yes. You must pay extra 10000VND. We have White Pearl, Black Pearl, Coffee Jelly, Caramel Souce,... "
+      ]
+    },
+    {
+      "tag": "stores",
+      "patterns": [
+        "Where are stores in Viet Nam ?",
+        "How many stores you have?",
+        "How many branch",
+        "Branch",
+        "Stores"
+      ],
+      "responses": [
+        "We have many branchs in 3 big city: Ha Noi, Ho Chi Minh and Da Nang",
+        "We have many stores in Ha Noi, Ho Chi Minh and Da Nang"
+      ]
+    },
+    {
+      "tag": "Ha Noi",
+      "patterns": [
+        "Where are stores in Ha Noi ?",
+        "Do you have stores in Ha Noi",
+        "Where are branchs in Ha Noi ?",
+        "Do you have branchs in Ha Noi ?"
+      ],
+      "responses": [
+        "We have many stores in Ha Noi. This is list of stores in Ha Noi: TCH Nguyen Van Cu, TCH Vincom Mega Mall Smart City, TCH The Park Home,... "
+      ]
+    },
+    {
+      "tag": "Ho Chi Minh",
+      "patterns": [
+        "Where are stores in Ho Chi Minh ?",
+        "Do you have stores in Ho Chi Minh",
+        "Where are branchs in Ho Chi Minh ?",
+        "Do you have branchs in Ho Chi Minh ?"
+      ],
+      "responses": [
+        "We have many stores in Ho Chi Minh. This is list of stores in Ho Chi Minh: TCH HCM The Grace Tower, TCH HCM The Hub Dien Bien Phu, TCH HCM Binh Phu,... "
+      ]
+    },
+    {
+      "tag": "Da Nang",
+      "patterns": [
+        "Where are stores in Da Nang ?",
+        "Do you have stores in Da Nang",
+        "Where are branchs in Da Nang ?",
+        "Do you have branchs in Da Nang ?"
+      ],
+      "responses": [
+        "We have many stores in Da Nang. This is list of stores in Da Nang: TCH DAN Tran Hung Dao, TCH DAN Nui Thanh, TCH DAN Trieu Nu Vuong,... "
+      ]
+    }
+  ]
+}

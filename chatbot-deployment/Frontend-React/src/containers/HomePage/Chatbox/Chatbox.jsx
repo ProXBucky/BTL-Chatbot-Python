@@ -28,7 +28,7 @@ export default function Chatbox() {
                 return [...prevMessages, msg1];
             });
 
-            const response = await fetch('http://127.0.0.1:5000/predict', {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_PORT}/predict`, {
                 method: 'POST',
                 body: JSON.stringify({ message: userMessage }),
                 mode: 'cors',
