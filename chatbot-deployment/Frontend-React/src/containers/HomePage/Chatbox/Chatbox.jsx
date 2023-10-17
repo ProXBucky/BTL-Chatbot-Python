@@ -3,8 +3,21 @@ import "./style.css"
 
 export default function Chatbox() {
 
+    const formatDate = () => {
+        const date = new Date(); // Create a Date object with the current date and time
+        // Extract the individual date and time components
+        const hours = date.getHours().toString().padStart(2, '0');
+        const minutes = date.getMinutes().toString().padStart(2, '0');
+        const day = date.getDate().toString().padStart(2, '0');
+        const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based, so add 1
+        const year = date.getFullYear();
+        const formattedDate = `${hours}:${minutes} ${day}/${month}/${year}`;
+        return formattedDate
+
+    }
+
     const [state, setState] = useState(false)
-    const [messages, setMessages] = useState([])
+    const [messages, setMessages] = useState([{ name: "Sam", message: 'Hi. My name is Sam. How can I help you? ', time: formatDate() }])
     const [userMessage, setUserMessage] = useState('');
 
     const toggleState = () => {
@@ -23,7 +36,7 @@ export default function Chatbox() {
         }
 
         try {
-            let msg1 = { name: "User", message: userMessage };
+            let msg1 = { name: "User", message: userMessage, time: formatDate() };
             setMessages((prevMessages) => {
                 return [...prevMessages, msg1];
             });
@@ -39,7 +52,7 @@ export default function Chatbox() {
 
             if (response.ok) {
                 const data = await response.json();
-                let msg2 = { name: "Sam", message: data.answer };
+                let msg2 = { name: "Sam", message: data.answer, time: formatDate() };
                 setMessages((prevMessages) => {
                     return [...prevMessages, msg2];
                 });
@@ -62,23 +75,26 @@ export default function Chatbox() {
     const reversedMessages = [...messages].reverse();
 
     return (
-        <div className="container" >
+        <div className="container border-8" >
             <div className='chatbox'>
                 <div className={`chatbox__support ${state ? 'chatbox--active' : ''}`}>
                     <div className="chatbox__header">
                         <div className="chatbox__image--header">
-                            <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image" />
+                            <img src="../../../../public/robot_head.svg" className="h-full w-full scale-[4.5]" alt="image" />
                         </div>
                         <div className="chatbox__content--header">
-                            <h4 className="chatbox__heading--header">Chat support</h4>
-                            <p className="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                            <h4 className="chatbox__heading--header">Sam from The Coffee House</h4>
+                            <p className="chatbox__description--header">I'm here to assist you!</p>
                         </div>
                     </div>
 
                     <div className="chatbox__messages">
                         {reversedMessages.map((message, index) => (
-                            <div key={index} className={`messages__item ${message.name === 'Sam' ? 'messages__item--visitor' : 'messages__item--operator'}`}>
-                                {message.message}
+                            <div>
+                                <div key={index} className={`messages__item ${message.name === 'Sam' ? 'messages__item--visitor' : 'messages__item--operator'}`}>
+                                    {message.message}
+                                </div>
+                                <div className={`text-gray-600 text-sm ${message.name === 'Sam' ? 'text-left' : 'text-right'}`}>{message.time}</div >
                             </div>
                         ))}
                     </div>
@@ -89,7 +105,11 @@ export default function Chatbox() {
                     </div>
                 </div>
                 <div className="chatbox__button">
-                    <button onClick={toggleState} className="hover:scale-95"><img src="/chatbox-icon.svg" /></button>
+                    <button onClick={toggleState} className="hover:scale-95 h-16 w-16">
+                        {
+                            !state ? <img src="/chatbox-icon.svg" /> : <i className="text-black fa-solid fa-x fa-2xl"></i>
+                        }
+                    </button>
                 </div>
             </div>
         </div >
